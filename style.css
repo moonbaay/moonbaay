@@ -83,6 +83,12 @@ img{
         left: 96.5%;
     }
 }
+@media  screen and (max-width:900px) {
+        .social-media {
+            position: absolute;
+            left: 96.5%;
+        }
+}
 @media screen and (max-width:520px){
     header{
         display: block;
@@ -115,5 +121,48 @@ img{
     }
 
 
+}
+
+@media  screen and (max-width:320px) {
+    header {
+        display: block;
+    }
+    
+    .logo {
+        text-align: center;
+        font-size: 1.5rem;
+   
+    }
+    
+    nav {
+        margin-top: 1rem;
+    }
+    ul{
+        display: grid;
+        text-align: center;
+    }
+    ul li a {
+        font-size: 1rem;
+    }
+    
+    .social-media {
+        position: absolute;
+        display: grid;
+        z-index: 2;
+        left: 88.5%;
+    }
+    
+    .social-media a {
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+    }
+    
+    .social-media a:hover {
+        color: var(--accent-color);
+    }
 }
 
