@@ -123,7 +123,7 @@ img{
 
 }
 
-@media  screen and (max-width:320px) {
+@media  screen and (max-width:360px) {
     header {
         display: block;
     }
@@ -149,7 +149,7 @@ img{
         position: absolute;
         display: grid;
         z-index: 2;
-        left: 88.5%;
+        left: 90%;
     }
     
     .social-media a {
