@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css" />
     <title>Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">Web dev</div>
-        <nav>
-            <ul>
-                <li><a href="#">about me</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-           
-        </nav>
-         <div class="burger-bar"><i class="fa-solid fa-bars"></i></div>
+      <div class="logo">Hello</div>
+      <nav>
+        <ul>
+          <li><a href="#">about me</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="burger-bar"><i class="fa-solid fa-bars"></i></div>
     </header>
     <section class="social-media">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="mailto:lunathao92@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <ul class="social-media-block">
+            <li>
+                <a href="https://www.linkedin.com/in/lu-thao-b66069173/" class="linkedin" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>
+                        linkedin
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:lunathao92@gmail.com" class="gmail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        gmail
+                    </span>
+                </a>
+            </li>
+            <li>
+                 <a href="https://github.com/moonbaay" class="github" target="_blank">
+                     <i class="fa-brands fa-github"></i>
+                        <span>
+                            github
+                        </span>
+                </a>
+            </li>
+        </ul>
+      
     </section>
-    <section class="hero">
 
+    <section class="hero">
+      <div class="name-content">
+        <div class="name">Lu Thao</div>
+        <div class="subtitle">Web Developer</div>
+        <div class="btn-gradient">
+            <button class="download-resume">Download Resume</button>
+        </div>
+        
+      </div>
+      
     </section>
     <!-- <section id="about-me">
         <div class="img"><img src="./images/portrait2.jpg" alt="portrait"></div>
@@ -48,5 +80,5 @@
     </section> -->
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
