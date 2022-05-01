@@ -150,6 +150,9 @@ img{
     background: linear-gradient(235deg, rgba(181, 60, 255, 1) 24%, rgba(0, 232, 255, 1) 64%, rgba(29, 0, 255, 1) 90%);
     padding: 5px;
 }
+.name-content{
+    line-height: 15rem;
+}
 .download-resume{
     background-color: var(--bg-color);
     border: none;
@@ -158,6 +161,11 @@ img{
     padding: 5px 10px;
     cursor: pointer;
     color: var(--title-color);
+}
+.download-resume:hover{
+    background-color: transparent;
+    text-decoration: underline white;
+    color: var(--bg-color);
 }
 /* @media screen and (max-width:1920px) {
     .social-media {
