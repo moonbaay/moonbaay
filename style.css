@@ -174,6 +174,7 @@ nav ul li a:hover{
     color: #4d4d4d;
 }
 .hero {
+    padding-top: 5rem;
     line-height: 6rem;
     display: grid;
     justify-content: center;
