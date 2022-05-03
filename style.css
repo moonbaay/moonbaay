@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root{
-    --bg-color: white;
-    --primary-color: #d9138a;
+    --bg-color: black;
+    --primary-color: white;
     --secondary-color:#322e2f;
     --accent-skyblue-color:skyblue;
     --accent-yellow-color:#FFE45C;
@@ -16,6 +16,9 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     font-family: var(--family-font);
@@ -46,7 +49,7 @@ nav ul .a-onscroll{
 .logo{
     font-size: 2rem;
     text-transform: uppercase;
-    color:var(--bg-color);
+    color:var(--primary-color);
     font-weight:bold;
     
 }
@@ -61,14 +64,14 @@ nav ul li{
 }
 
 nav ul li a{
-    color:var(--bg-color);
+    color:var(--primary-color);
     text-decoration: none;
     padding: 0 10px;
     cursor: pointer;
     font-size: 1.2rem;
 }
 nav ul li a:hover{
-    color: #322e2f
+    color: lightgray;
 }
 
 .burger-bar{
@@ -90,7 +93,7 @@ nav ul li a:hover{
 
 .social-media li a{
     display: block;
-    color: var(--bg-color);
+    color: var(--primary-color);
     width: 100%;
     height: 100%;
     line-height: 50px;
@@ -135,16 +138,9 @@ nav ul li a:hover{
 .social-media a:hover span{
     display: block;
 }
-.name{
-    font-size: 5rem;
-    color: var(--title-color);
-}
-.subtitle{
-    color: white;
-    font-size: 5rem;
-}
+
 .btn-gradient{
-    width: 350px;
+    width: 550px;
     height: 60px;
     border-radius: 1rem;
     display: grid;    
@@ -152,51 +148,49 @@ nav ul li a:hover{
     background: linear-gradient(235deg, rgba(181, 60, 255, 1) 24%, rgba(0, 232, 255, 1) 64%, rgba(29, 0, 255, 1) 90%);
     padding: 5px;
 }
-.name-content{
-    line-height: 7rem;
-    display: flex;
-    flex-direction: column;
 
-}
-.name-content:nth-child(1) div {
-    color: white;
-}
-.hero-btn-wrapper{
-    display: flex;
-    gap: 0 15px;
-}
 .download-resume,.project-btn{
     background-color: var(--bg-color);
     border: none;
-    font-size: 2rem;
+    font-size: 1rem;
     border-radius: 1rem;
     padding: 5px 10px;
     cursor: pointer;
-    color: var(--title-color);
+    color: var(--primary-color);
     text-transform: capitalize;
 }
 
 .download-resume:hover,
 .project-btn:hover{
-    background-color: rgb(223, 222, 222);
-    text-decoration: underline var(--title-color);
-}
-.btn-gradient i {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 20px;  
-}
-.hero {
-    padding-left: 13rem;
-    padding-top: 15rem;
-    background-color: var(--primary-color);
-    width: 100%;
-    height: 65vh;
+    background-color: rgb(46, 46, 46);
     
 }
-
+.hero i {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 8rem;  
+    color: #4d4d4d;
+}
+.hero {
+    line-height: 6rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 98vh;
+    color: var(--primary-color); 
+}
 .subtitle-2{
-    color: #322e2f;
+    font-size: 3rem;
+}
+.name{
+    font-size: 4.5rem;
+}
+.subtitle{
+    font-size: 3rem;
+    font-family: serif;
 }
 .about{
     width: 100%;
@@ -207,14 +201,14 @@ nav ul li a:hover{
     font-size: 10rem;
     text-align: center;
     text-transform: lowercase;
-    color: var(--secondary-color);
+    color: var(--bg-color);
     margin-bottom: 10rem;
     transition: all .4s linear;
 }
 .about-me-h1-onscroll{
     transition: all .4s linear;
     font-size: 5rem;
-    color: var(--primary-color);
+    color: var(--bg-color);
     margin: 5rem 0;
 }
 .about-content{
@@ -223,18 +217,84 @@ nav ul li a:hover{
     align-items: center;
 
 }
-img {
+.about-img img{
     background-size: cover;
     width: 100%;
     border-radius: 50%;
     filter: grayscale(100%);
     box-shadow: 2px 10px 9px gray;
 }
-img,.bio-txt{
+.about-img img,.bio-txt{
     
     width: 400px;
 }
 .bio-txt{
     line-height: 1.7rem;
     font-size: 1.3rem;
+}
+
+.project{
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(70, 70, 70);
+    padding: 3rem;
+    gap: 10px;
+
+}
+.card{
+    max-width: 400px;
+    width: 100%;
+    background-color:var(--primary-color);
+    position: relative;
+    cursor: pointer;
+}
+.card-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-content-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #171515be;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px 0;
+    padding: 10px;
+
+}
+.card:hover .card-content-overlay{
+    opacity: 1;
+}
+.card-content-overlay p{
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+.card-content-overlay a{
+    color: var(--primary-color);
+    border: 1px solid white;
+    text-decoration: none;
+    width: 50px;
+    height: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.card-content-overlay a:hover{
+    background-color: rgba(211, 211, 211, 0.432);
 }
