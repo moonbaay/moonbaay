@@ -7,7 +7,7 @@
     --accent-yellow-color:#FFE45C;
     --heading-font: 2.5rem;
     --title-font: 5rem;
-    --family-font: 'Roboto', sans-serif;
+    --family-font: sans-serif;
     --title-color: black;
     --transparent-color: transparent;
 }
@@ -34,18 +34,19 @@ header{
     position: fixed;
     z-index: 999;
     box-shadow: 2px 6px 15px black;
-    transition: all .5s linear;
+    border: none;
+    transition: border .7s linear;
 }
 .header-onscroll{
     transition: all .3s linear;
-    background-color: skyblue;   
-
+    background-color: var(--bg-color);
+    border-bottom: 5px solid;   
+    /* border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem; */
     box-shadow: 2px 6px 15px black;
+    border-image: linear-gradient(to right, rgb(77, 249, 255), rgb(168, 0, 252),orange) 10;
 }
-nav ul .a-onscroll{
-    
-    
-}
+
 .logo{
     font-size: 2rem;
     text-transform: uppercase;
@@ -110,7 +111,7 @@ nav ul li a:hover{
 }
 .github{
     background-color: #171515;
-}
+} 
 .gmail{
     background-color: #DB4437;
 }
@@ -147,23 +148,25 @@ nav ul li a:hover{
     background: rgb(181, 60, 255);
     background: linear-gradient(235deg, rgba(181, 60, 255, 1) 24%, rgba(0, 232, 255, 1) 64%, rgba(29, 0, 255, 1) 90%);
     padding: 5px;
+
 }
 
-.download-resume,.project-btn{
+.download-resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--bg-color);
+    height: 50px;
     border: none;
     font-size: 1rem;
     border-radius: 1rem;
-    padding: 5px 10px;
     cursor: pointer;
     color: var(--primary-color);
     text-transform: capitalize;
 }
 
-.download-resume:hover,
-.project-btn:hover{
-    background-color: rgb(46, 46, 46);
-    
+.download-resume:hover{
+    background-color: rgb(46, 46, 46);  
 }
 .hero i {
     font-size: 2.5rem;
@@ -181,56 +184,104 @@ nav ul li a:hover{
     width: 100%;
     height: 98vh;
     color: var(--primary-color); 
+    
+}
+.name,.subtitle-2{
+    letter-spacing: .5rem;
 }
 .subtitle-2{
     font-size: 3rem;
+    
 }
 .name{
     font-size: 4.5rem;
 }
-.subtitle{
+.subtitle span{
+    opacity: 0;
     font-size: 3rem;
     font-family: serif;
+    letter-spacing: 1.5rem;
+    transition: all 1s ease;
+    display: inline-block;
+    color: var(--primary-color);
+}
+.subtitle .fade{
+    opacity: 1;
+
 }
 .about{
+    position: relative;;
     width: 100%;
     height: 100vh;
-
 }
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -3;
+}
+
 .about-me-title{
-    font-size: 10rem;
+    position: absolute;
+    top: 5%;
+    text-align: center;
+    width: 100%;
+    font-size: 7rem;
     text-align: center;
     text-transform: lowercase;
-    color: var(--bg-color);
-    margin-bottom: 10rem;
-    transition: all .4s linear;
-}
-.about-me-h1-onscroll{
-    transition: all .4s linear;
-    font-size: 5rem;
-    color: var(--bg-color);
-    margin: 5rem 0;
-}
-.about-content{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    color: var(--primary-color);
+    letter-spacing: 1rem;
+    padding-bottom: 2rem;
 
 }
-.about-img img{
-    background-size: cover;
+.about-content{
     width: 100%;
-    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 25%;
+    color: var(--primary-color);
+
+}
+.about-content h3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    width: 20rem;
+    padding: 2rem 0;
+
+
+}
+.skill-content p{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.bio-content,.skill-content{
+
+    border: 1px solid lightgray;
+    min-width: 200px;
+    max-width: 350px;
+    border-radius: 1rem;
+    padding: 20px;
+}
+.about-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
     filter: grayscale(100%);
-    box-shadow: 2px 10px 9px gray;
+    display: block;
+    border-radius: 50%;
 }
-.about-img img,.bio-txt{
-    
-    width: 400px;
-}
+
 .bio-txt{
+    margin-top: 1.5rem;
+    text-align: center;
     line-height: 1.7rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .project{
@@ -297,4 +348,94 @@ nav ul li a:hover{
 
 .card-content-overlay a:hover{
     background-color: rgba(211, 211, 211, 0.432);
+}
+#contact{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    gap: 0 50px;
+}
+.contact-content-left{
+
+    min-width: 500px;
+    min-height:200px;
+    display: grid;
+    align-items: center;
+    font-size: 2rem;
+    text-transform:uppercase;
+
+}
+
+.contact-content-left h1:nth-child(1){
+    padding-left: 6rem;
+}
+.contact-content-left h1:nth-child(2){
+    text-align: center;
+
+}
+.contact-content-left h1:nth-child(3) {
+    text-align: right;
+    
+}
+.contact-form h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.contact-form{
+    background-color: var(--primary-color);
+    display: grid;
+    gap: 10px 0;
+    min-width: 400px;
+    min-height:200px;
+    padding: 40px 20px;
+    border-radius: 1rem;
+    box-shadow: 3px 5px 10px black;
+}
+.submit-btn {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    text-decoration: inherit;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: large;
+}
+.border-gradient{
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+input,textarea{
+    text-transform: capitalize;
+    padding-top:10px;
+    border: none;
+    border-bottom:  1px solid lightgray;
+}
+input:focus,textarea:focus{
+    outline: 1px solid #0e76a8;
+    border-bottom: #171515;
+}
+
+
+
+footer{
+    display: grid;
+    place-items: end;
+    height: 100px;
+    width: 100%;
+    padding: auto 5px;
+    background: rgb(181, 60, 255);
+    background: linear-gradient(235deg, rgba(181, 60, 255, 1) 24%, rgba(0, 232, 255, 1) 64%, rgba(29, 0, 255, 1) 90%);
+}
+footer div{
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 90px;
 }
