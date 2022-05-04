@@ -80,3 +80,113 @@
             max-width: 250px;
         }
 }
+@media screen and (max-width:400px) {
+
+    .burger-bar{
+        display: block;
+        color: var(--primary-color);
+    }
+    header{
+        display:grid;
+    }
+    .nav-ul{
+        display: grid;
+    }
+    .btn-gradient{
+        width: 230px;
+    }
+   
+    #hero{
+        line-height: 2.5rem;
+    }
+    #hero i{
+        font-size: 1.2rem;
+    }
+    .name,.subtitle-2{
+        letter-spacing: .3rem;
+    }
+    .subtitle-2{
+        font-size: 1.3rem;
+    }
+    .name{
+        font-size: 2rem;
+    }
+    .subtitle span{
+        font-size: 2rem;
+        letter-spacing: .5rem;
+        padding-bottom: 10px;
+    }
+    .name-content{
+        display: grid;
+        place-items: center;
+       
+    }
+    .about-content{
+        display: grid;
+        gap: 10px 10px;
+    }
+    .about-me-title{
+        font-size: 1.6rem;
+    }
+    .about-img img{
+        width: 50px;
+    }
+    .bio-txt{
+        overflow: scroll;
+        height: 100px;
+    }
+    .skill-content{
+        display: flex;
+        place-items: center;
+    }
+    .skill-content div p{
+        text-align: left;
+        font-size: 1.3rem;
+    }
+    .skill-title{
+        font-size: 1rem;
+    }
+
+    #contact{
+
+        display: grid;
+        gap: 0;
+        place-items: center;
+        grid-template-rows: repeat(1,1fr);
+        row-gap:20px;
+    }
+  
+    .contact-content-left-block{
+        max-width: 150px;
+        display: grid;
+        font-size: 1rem;
+        min-height: 100px;
+    }
+    .contact-content-left h1{
+       line-height: -2rem;
+        text-align: left;
+        border: 1px solid black;
+        margin: 0;
+        box-sizing: border-box;
+        
+    }
+    .contact-form h2{
+        font-size: 1rem;
+    }
+    .contact-form{
+        min-width: 150px;
+        min-height: 100px;
+
+    }
+    .submit-btn{
+        padding: 5px;
+    }
+    .card-container{
+        gap: 10px 0;
+        padding: 0;
+    }
+    .card{
+        width: 200px;
+        
+    }
+}

@@ -80,7 +80,8 @@ nav ul li a:hover{
     transform: translateY(10px);
 }
 .burger-bar{
-    display: none;
+    display: none;   
+
 }
 .social-media {
     position: absolute;
@@ -415,9 +416,9 @@ nav ul li a:hover{
     font-size: large;
 }
 .border-gradient{
-    border: 10px solid;
+    border: 5px solid;
     border-image-slice: 1;
-    border-width: 5px;
+    border-width: 3px;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 input,textarea{

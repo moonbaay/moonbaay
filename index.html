@@ -12,8 +12,8 @@
   <body>
     <header>
       <div class="logo">lt</div>
-      <nav>
-        <ul id="nav-ul">
+      <nav class="nav-blcok">
+        <ul class="nav-ul">
           <li class="link hero active"><a href="#">Home</a></li>
           <li class="link project"><a href="#project">Project</a></li>
           <li class="link about"><a href="#about">about me</a></li>
@@ -111,7 +111,8 @@
             <p class="bio-txt">I am web and programming developer who enjoys learning new things and is eager to be transformed.  I'm looking for a challenging career at a reputable company where I can develop new skills, broaden my knowledge, and apply what I've learned.</p>
         </div>
         <div class="skill-content">
-        <h3 class="shape">Skill</h3>
+        <h3 class="skill-title">Skill</h3>
+        <div>
         <p>HTML</p>
         <p>CSS</p>
         <p>Javascript</p>
@@ -119,6 +120,9 @@
         <p>C++</p>
         <p>React</p>
         <p>SQL</p>
+
+        </div>
+
       </div>
       </div>
     </section>
@@ -135,7 +139,7 @@
             <h2>Feel free to contact me</h2>
             <input type="text" name="name" required placeholder="Full name">
             <input type="email" name="email" required placeholder="email">
-            <textarea name="message" placeholder="Message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="message" placeholder="Message" id="message" cols="30" rows="6"></textarea>
             <button type="submit" class="submit-btn border-gradient">Send</button>
           </form>
         </div>
