@@ -36,10 +36,12 @@ const contact = document.getElementById("contact");
 
 let contactY = 2200
 
-window.onscroll = function(){headerOnScroll()}
+window.onscroll = function(){
+    headerOnScroll()
+    highLightNavLink()
+}
 
 function headerOnScroll(){
-    let scrollPointY = document.documentElement.scrollTop;
     if(document.documentElement.scrollTop>50){
         headerOnScrollEl.classList.add('header-onscroll')
         aOnscroll.forEach((item)=>{
@@ -52,19 +54,32 @@ function headerOnScroll(){
           item.className = "";
         });
     }
-    // if(scrollPointY >= contactY){
-    //     contactContentLeft.classList.add('contact-content-left-block')
-    // }
-    animationOnContact(scrollPointY,contactY)
-    console.log(scrollPointY)   
+  
 }
-function animationOnContact(point,contactY){
-    if(point >= contactY){
-        contactContentLeft.classList.add("contact-content-left-block");
-    }else{
+function highLightNavLink(){
+    const sections = document.querySelectorAll('.section')
+    const links = document.querySelectorAll('.link')
+
+    let cur = ''
+    sections.forEach(section=>{
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.clientHeight
+        if(pageYOffset >= (sectionTop - sectionHeight/3) ){
+            cur = section.getAttribute('id')
+        }
+
+    })
+
+    links.forEach(link =>{
+        link.classList.remove('active')
         contactContentLeft.classList.remove("contact-content-left-block");
-    }
+        if(link.classList.contains(cur)){
+            link.classList.add('active')
+            contactContentLeft.classList.add('contact-content-left-block')
+        }
+    })
 }
+
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 const gradientBtn = document.querySelector(".btn-gradient");
 const heroPage = document.querySelector('.hero')

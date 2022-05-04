@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css" />
     <title>Portfolio</title>
   </head>
@@ -13,9 +14,10 @@
       <div class="logo">lt</div>
       <nav>
         <ul id="nav-ul">
-          <li><a href="#about">about me</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="link hero active"><a href="#">Home</a></li>
+          <li class="link project"><a href="#project">Project</a></li>
+          <li class="link about"><a href="#about">about me</a></li>
+          <li class="link contact"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="burger-bar"><i class="fa-solid fa-bars"></i></div>
@@ -50,7 +52,7 @@
       
     </section>
     
-    <section class="hero">
+    <section class="section" id="hero">
       <div class="name-content">
         <div class="subtitle-2">Hello,</div>
         <div class="name">I'm Lu Thao</div>
@@ -65,7 +67,7 @@
       </div>
   </section>
 
-    <section id="project" class="project">
+    <section id="project" class="section">
         <div class="card-container">
             <div class="card">
               <img src="./images/bugs.jpg" alt="bug" class="card-image">
@@ -95,7 +97,7 @@
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="section" id="about">
       <video muted autoplay loop class="video-container">
         <source src="./images/Pexels Videos 2792967.mp4" type="video/mp4">
       </video>
@@ -103,7 +105,9 @@
       <div class="about-content">
       
         <div class="bio-content">
-           <div class="about-img"><img src="./images/portrait2.jpg" alt="portrait"></div>
+           <div class="about-img">
+             <img src="./images/portrait2.jpg" alt="portrait">
+            </div>
             <p class="bio-txt">I am web and programming developer who enjoys learning new things and is eager to be transformed.  I'm looking for a challenging career at a reputable company where I can develop new skills, broaden my knowledge, and apply what I've learned.</p>
         </div>
         <div class="skill-content">
@@ -119,7 +123,7 @@
       </div>
     </section>
     
-    <section id="contact">
+    <section class="section" id="contact">
  
         <div id="contact-content-left" class="contact-content-left">
           <h1>Let's</h1>

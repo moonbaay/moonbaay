@@ -1,0 +1,82 @@
+@media  screen and (max-height:800px) {
+    .about-me-title{
+        font-size: 3rem;
+    }
+    .about-content h3{
+        font-size: 2.5rem;
+    }
+    .skill-content p{
+        font-size: 1.5rem;
+    }
+    .bio-content,
+    .skill-content{
+        transition: all .5s ease;
+        max-width: 350px;
+        max-height:470px;
+        
+    }
+    .about-img{
+        max-width: 150px;
+
+    }
+    .bio-txt{
+        text-align:start;
+        overflow: scroll;
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .contact-content-left-block{
+        min-width: 350px;
+    }
+    .card-container{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:900px) {
+        .about-content{
+            margin-top: 3rem;
+        }
+        .about-me-title {
+      
+            padding-top: 3rem;
+            font-size: 3rem;
+        }
+        
+        .about-content h3 {
+            font-size: 2.5rem;
+        }
+        
+        .skill-content p {
+            font-size: 1.5rem;
+        }
+        
+        .bio-content,
+        .skill-content {
+            transition: all .5s ease;
+            max-width: 300px;
+            max-height: 470px;
+        
+        }
+        
+        .about-img {
+            max-width: 150px;
+        
+        }
+        
+        .bio-txt {
+            text-align: start;
+            overflow: scroll;
+            font-size: 15px;
+            letter-spacing: 0;
+        }
+        .contact-content-left-block {
+                min-width: 200px;
+        }
+        .card{
+            max-width: 250px;
+        }
+}
