@@ -44,15 +44,11 @@ window.onscroll = function(){
 function headerOnScroll(){
     if(document.documentElement.scrollTop>50){
         headerOnScrollEl.classList.add('header-onscroll')
-        aOnscroll.forEach((item)=>{
-            item.className = "a-onscroll"
-        })
+
        
     }else{
         headerOnScrollEl.classList.remove('header-onscroll');
-        aOnscroll.forEach((item) => {
-          item.className = "";
-        });
+
     }
   
 }
@@ -104,5 +100,25 @@ function getRandomColor(){
 }
 window.addEventListener('DOMContentLoaded',function(){
         setInterval(getRandomColor,3000)
+        navGrid()
 })
+
+function navGrid(){
+    const navFlex = document.querySelector('.nav-flex')
+    const burgerIcon = document.querySelector('.burger-bar')
+    const xIcon = document.querySelector('.x-mark')
+    burgerIcon.addEventListener('click',function(){
+        navFlex.classList.toggle('nav-grid');
+        headerOnScrollEl.classList.remove("header-onscroll");
+        burgerIcon.classList.remove('burger-bar')
+        xIcon.classList.add('x-mark-show')
+    })
+
+    xIcon.addEventListener('click', function(){
+        navFlex.classList.remove("nav-grid");
+        headerOnScrollEl.classList.remove("header-onscroll");
+        burgerIcon.classList.add("burger-bar");
+        xIcon.classList.remove("x-mark-show");
+    })
+}
 
