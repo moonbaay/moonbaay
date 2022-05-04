@@ -163,6 +163,7 @@ nav ul li a:hover{
     cursor: pointer;
     color: var(--primary-color);
     text-transform: capitalize;
+    text-decoration: none;
 }
 
 .download-resume:hover{
@@ -204,10 +205,11 @@ nav ul li a:hover{
     transition: all 1s ease;
     display: inline-block;
     color: var(--primary-color);
+   
 }
 .subtitle .fade{
     opacity: 1;
-
+    transform: translateY(5px);
 }
 .about{
     position: relative;;
@@ -229,12 +231,11 @@ nav ul li a:hover{
     top: 5%;
     text-align: center;
     width: 100%;
-    font-size: 7rem;
+    font-size: 4rem;
     text-align: center;
     text-transform: lowercase;
     color: var(--primary-color);
     letter-spacing: 1rem;
-    padding-bottom: 2rem;
 
 }
 .about-content{
@@ -242,7 +243,7 @@ nav ul li a:hover{
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    top: 25%;
+    top: 17%;
     color: var(--primary-color);
 
 }
@@ -360,15 +361,21 @@ nav ul li a:hover{
 }
 .contact-content-left{
 
-    min-width: 500px;
-    min-height:200px;
-    display: grid;
-    align-items: center;
-    font-size: 2rem;
-    text-transform:uppercase;
+    opacity: 0;
+    display: inline-block;
+}
+.contact-content-left-block{
+        min-width: 500px;
+        min-height:200px;
+        display: grid;
+        align-items: center;
+        font-size: 2rem;
+        text-transform:uppercase;
+        opacity: 1;
+        transition: all .8s ease;
+        transform: translateY(5px);
 
 }
-
 .contact-content-left h1:nth-child(1){
     padding-left: 6rem;
 }

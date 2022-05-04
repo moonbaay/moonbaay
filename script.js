@@ -3,17 +3,17 @@ const headerOnScrollEl = document.querySelector('header')
 const aOnscroll = document.querySelectorAll("#nav-ul li a");
 const aboutMeTitleOnscroll = document.getElementById('about-title')
 const footerBg = document.querySelector('footer')
-
+const contactContentLeft = document.getElementById('contact-content-left')
 const subtitleText = document.querySelector('.subtitle')
 const text = subtitleText.textContent
 const subtitleTextArr = text.split('')
 subtitleText.textContent = "";
 
+
 for (let index = 0; index < subtitleTextArr.length; index++) {
     subtitleText.innerHTML += '<span>' + subtitleTextArr[index]+'</span>'
     
 }
-
 let char = 0;
 let timer = setInterval(onTick,100)
 
@@ -31,9 +31,15 @@ function end(){
     clearInterval(timer)
     timer = null
 }
+
+const contact = document.getElementById("contact");
+
+let contactY = 2200
+
 window.onscroll = function(){headerOnScroll()}
 
 function headerOnScroll(){
+    let scrollPointY = document.documentElement.scrollTop;
     if(document.documentElement.scrollTop>50){
         headerOnScrollEl.classList.add('header-onscroll')
         aOnscroll.forEach((item)=>{
@@ -46,8 +52,19 @@ function headerOnScroll(){
           item.className = "";
         });
     }
+    // if(scrollPointY >= contactY){
+    //     contactContentLeft.classList.add('contact-content-left-block')
+    // }
+    animationOnContact(scrollPointY,contactY)
+    console.log(scrollPointY)   
 }
-
+function animationOnContact(point,contactY){
+    if(point >= contactY){
+        contactContentLeft.classList.add("contact-content-left-block");
+    }else{
+        contactContentLeft.classList.remove("contact-content-left-block");
+    }
+}
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 const gradientBtn = document.querySelector(".btn-gradient");
 const heroPage = document.querySelector('.hero')
@@ -68,7 +85,7 @@ function getRandomColor(){
 
         gradientBtn.style.background = `linear-gradient(90deg, ${hexColor}, ${hexColor1},${hexColor1}`;
         gradientBtn.style.transition = `all 2s linear`
-        footerBg.style.background = `linear-gradient(90deg, ${hexColor}, ${hexColor1},${hexColor1}`;
+        footerBg.style.background = `linear-gradient(left, ${hexColor}, ${hexColor1},${hexColor1}`;
 }
 window.addEventListener('DOMContentLoaded',function(){
         setInterval(getRandomColor,3000)
