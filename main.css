@@ -12,7 +12,7 @@
     .skill-content{
         transition: all .5s ease;
         max-width: 350px;
-        max-height:470px;
+        min-height:370px;
         
     }
     .about-img{
@@ -21,7 +21,7 @@
     }
     .bio-txt{
         text-align:start;
-        overflow: scroll;
+        overflow-y: scroll;
         font-size: 20px;
         letter-spacing: 0;
     }
@@ -53,7 +53,9 @@
             width: 100%;
             text-align: center;
         }
-        
+        .about-img{
+            width: 150px;
+        }
         .skill-content p {
             font-size: 1.5rem;
         }
@@ -72,7 +74,7 @@
         
         .bio-txt {
             text-align: start;
-            overflow: scroll;
+ 
             font-size: 15px;
             letter-spacing: 0;
         }
@@ -88,9 +90,6 @@
     #contact {
         display: grid;
     }
-
-    .about-content {}
-
     .about-img img {
         width: 100px;
     }
@@ -98,11 +97,12 @@
     .bio-content,
     .skill-content {
         max-width: 200px;
-        height: 400px;
+        height: 310px;
     }
 
     .bio-txt {
         height: 200px;
+        overflow-y: scroll;
     }
 
     .skill-title {
@@ -159,12 +159,11 @@
         
     }
     .social-media li{
-        height: 30px;
 
+        height: 30px;
     }
     .social-media li a{
         font-size: 1rem;
-
         padding: 0;
         line-height: 0;
         
@@ -173,7 +172,10 @@
         top: 25%;
         left: 25%;
     }
-
+    .social-media li a span{
+        padding-top:15px;
+        padding-right: 5rem;
+    }
 
     .nav-ul{
         display: grid;
@@ -209,7 +211,7 @@
     }
     .about-content{
         display: grid;
-        gap: 10px 10px;
+        gap: 10px;
     }
     .about-me-title{
         font-size: 1.6rem;
@@ -218,8 +220,8 @@
         width: 50px;
     }
     .bio-txt{
-        overflow: scroll;
-        height: 100px;
+        overflow-y: scroll;
+        height: 150px;
     }
     .skill-content{
         display: flex;
